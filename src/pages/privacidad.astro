@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Fecha de actualización automática o manual
+const lastUpdate = "22 de Diciembre, 2025";
+---
+
+<Layout title="Términos y Privacidad - CercaMío">
+    
+    <!-- HEADER -->
+    <div class="bg-gray-50 py-20 border-b border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Centro Legal</h1>
+            <p class="text-xl text-gray-500">Transparencia y claridad en nuestra relación contigo.</p>
+            <p class="text-sm text-gray-400 mt-4">Última actualización: {lastUpdate}</p>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-16 grid gap-16">
+
+        <!-- SECCIÓN 1: TÉRMINOS Y CONDICIONES -->
+        <section id="terminos">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                    <i class="fas fa-file-contract text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Términos y Condiciones</h2>
+            </div>
+
+            <div class="prose prose-blue max-w-none text-gray-600 space-y-8">
+                
+                <!-- 1. Descripción -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">1. Descripción del Servicio</h3>
+                    <p>CercaMío es una plataforma tecnológica de geolocalización e intermediación que permite a Usuarios ("Compradores") identificar y contactar a Comercios y Prestadores de Servicios ("Vendedores") cercanos a su ubicación en todo el territorio de la República Argentina. CercaMío actúa únicamente como facilitador de la transacción.</p>
+                </article>
+
+                <!-- 2. Intermediario -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2. Rol de Intermediario (Cláusula de Indemnidad)</h3>
+                    <p>CercaMío NO es propietario de los productos ofrecidos, no tiene posesión de ellos ni los ofrece en venta. CercaMío no interviene en el perfeccionamiento de las operaciones realizadas entre los Usuarios ni en las condiciones por ellos estipuladas. Por ello, CercaMío no será responsable respecto de la existencia, calidad, cantidad, estado, integridad o legitimidad de los bienes ofrecidos, adquiridos o enajenados por los Vendedores.</p>
+                </article>
+
+                <!-- 3. Pagos (Destacado) -->
+                <article class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                    <h3 class="text-xl font-bold text-blue-900 mb-2">3. Procesamiento de Pagos y Mandato de Cobro</h3>
+                    <p class="mb-4">CercaMío integra los servicios de procesamiento de pagos de Mercado Pago. Al utilizar la App, el Usuario acepta los Términos de Mercado Pago.</p>
+                    <div class="pl-4 border-l-4 border-blue-300">
+                        <strong class="block text-blue-800 mb-1">CLÁUSULA PARA VENDEDORES:</strong>
+                        <p class="text-sm">Al vincular su cuenta, usted otorga a CercaMío un mandato irrevocable para:</p>
+                        <ul class="list-disc list-inside text-sm mt-1 space-y-1">
+                            <li>Cobrar por su cuenta y orden el precio de las ventas.</li>
+                            <li>Descontar automáticamente la comisión por uso de plataforma.</li>
+                            <li>Ejecutar reembolsos a los Compradores en caso de reclamos válidos o ejercicio del derecho de arrepentimiento, autorizando a CercaMío a deducir dichos fondos de su saldo disponible o futuro.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 4. Ofertas Flash -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4. Ofertas Flash y Disponibilidad</h3>
+                    <p>Las "Ofertas Flash" tienen una duración limitada (ej: 24 horas) o hasta agotar stock. El Vendedor es el único responsable de asegurar la disponibilidad. En caso de falta de stock tras la compra, el Vendedor deberá cancelar la orden inmediatamente para generar el reembolso automático al Comprador.</p>
+                </article>
+
+                <!-- 5. Conducta -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">5. Reseñas y Conducta</h3>
+                    <p>Los Usuarios pueden publicar reseñas y fotos. Queda prohibido subir contenido ofensivo, sexual, violento o que infrinja derechos de autor. CercaMío se reserva el derecho de eliminar contenido y suspender cuentas sin previo aviso.</p>
+                </article>
+
+                <!-- 6. Geolocalización -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">6. Geolocalización</h3>
+                    <p>El Usuario presta su consentimiento para que CercaMío recolecte datos de su geolocalización (GPS) en tiempo real mientras utiliza la App. Estos datos son necesarios para la funcionalidad principal de búsqueda espacial y cálculo de envíos.</p>
+                </article>
+
+                <!-- 7. Logística -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">7. Logística y Envíos</h3>
+                    <p>Los servicios de entrega pueden ser prestados por el propio Vendedor o por terceros independientes (Repartidores). CercaMío no mantiene relación laboral con los repartidores registrados en la plataforma, quienes actúan como trabajadores autónomos independientes. CercaMío no se responsabiliza por daños o pérdidas durante el transporte, salvo en casos de negligencia grave imputable directamente a la plataforma.</p>
+                </article>
+
+                <!-- 8. Modificaciones -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">8. Modificaciones</h3>
+                    <p>CercaMío se reserva el derecho de modificar estos Términos en cualquier momento. Las modificaciones entrarán en vigencia inmediatamente después de su publicación en la Aplicación. El uso continuado implica la aceptación de los nuevos términos.</p>
+                </article>
+
+                <!-- 9. Arrepentimiento -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">9. Botón de Arrepentimiento y Revocación</h3>
+                    <p>Conforme a la Resolución 424/2020 y el Código Civil y Comercial, el Comprador tiene derecho a revocar la aceptación de la compra dentro de los DIEZ (10) días corridos computados a partir de la celebración del contrato o de la entrega del bien.</p>
+                    <p class="mt-2 text-sm text-gray-500 bg-gray-100 p-3 rounded-lg">
+                        <strong>EXCEPCIONES:</strong> El derecho de revocación NO APLICA a productos personalizados o perecederos (comidas elaboradas, alimentos frescos).
+                    </p>
+                    <p class="mt-2">Para ejercer este derecho, el Usuario debe utilizar el "Botón de Arrepentimiento" disponible en el menú de la Aplicación o en este sitio web.</p>
+                </article>
+
+                <!-- 10. Jurisdicción -->
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">10. Jurisdicción</h3>
+                    <p>Este acuerdo se rige por las leyes de la República Argentina. Cualquier controversia será sometida a los Tribunales Ordinarios de la Ciudad de Comodoro Rivadavia, provincia de Chubut, renunciando a cualquier otro fuero o jurisdicción.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <!-- SECCIÓN 2: POLÍTICA DE PRIVACIDAD -->
+        <section id="privacidad">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Política de Privacidad</h2>
+            </div>
+
+            <div class="prose prose-blue max-w-none text-gray-600 space-y-8">
+                
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">1. Datos Recolectados</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Datos Personales:</strong> Nombre, Email, Teléfono.</li>
+                        <li><strong>Datos Transaccionales:</strong> Historial de compras/ventas.</li>
+                        <li><strong>Datos de Ubicación:</strong> Geolocalización precisa en primer plano.</li>
+                        <li><strong>Documentación de Identidad:</strong> Imágenes de DNI y constancias de CBU/CVU (Solo Socios/Vendedores) para validación de identidad (KYC).</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">2. Uso de la Información</h3>
+                    <p>Los datos se utilizan para: conectar a Compradores con Vendedores, procesar pagos y dispersión de fondos a través de Mercado Pago, enviar notificaciones push sobre pedidos y validar la identidad de los Vendedores para seguridad de la comunidad.</p>
+                </article>
+
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">3. Seguridad y Almacenamiento</h3>
+                    <p>CercaMío implementa medidas de seguridad técnicas para proteger su información. La documentación sensible (DNI) se almacena en servidores cifrados con acceso restringido y URLs firmadas temporalmente, no siendo accesibles públicamente.</p>
+                </article>
+
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4. Compartición con Terceros</h3>
+                    <p>Compartimos datos estrictamente necesarios con:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Vendedores:</strong> Para coordinar la entrega (Nombre, Dirección).</li>
+                        <li><strong>Mercado Pago:</strong> Para procesar cobros y cumplir normas antilavado.</li>
+                        <li><strong>Autoridades:</strong> Solo bajo requerimiento judicial formal.</li>
+                    </ul>
+                    <p class="mt-2 font-bold text-gray-800">CercaMío NO vende sus datos a terceros con fines publicitarios.</p>
+                </article>
+
+                <article>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">5. Derechos ARCO</h3>
+                    <p>Conforme a la Ley 25.326 (Protección de Datos Personales), usted tiene la facultad de ejercer el derecho de acceso, rectificación o supresión de sus datos. Para ello, envíe un correo a <a href="mailto:soporte@cercamio.app" class="text-blue-600 hover:underline">soporte@cercamio.app</a> indicando en el asunto "Privacidad de Datos".</p>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+</Layout>

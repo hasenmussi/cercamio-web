@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Eliminar Datos - CercaMío">
+    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-20 px-4">
+        <div class="max-w-lg w-full bg-white p-8 md:p-10 rounded-3xl shadow-xl text-center border border-gray-100">
+            
+            <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                <i class="fas fa-user-shield text-red-500 text-3xl"></i>
+            </div>
+
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-4">Gestión de Datos</h1>
+            <p class="text-gray-500 mb-8 leading-relaxed">
+                Valoramos tu privacidad. Si deseas ejercer tu derecho a la eliminación de datos (Derecho al Olvido), sigue el proceso a continuación.
+            </p>
+
+            <div class="text-left space-y-6">
+                
+                <div class="bg-blue-50 p-5 rounded-2xl border border-blue-100">
+                    <h3 class="font-bold text-blue-900 mb-2 flex items-center gap-2">
+                        <i class="fas fa-info-circle"></i> ¿Qué se eliminará?
+                    </h3>
+                    <ul class="list-disc list-inside text-sm text-blue-800 space-y-1 opacity-80">
+                        <li>Tu cuenta de usuario y credenciales.</li>
+                        <li>Historial de ubicaciones y búsquedas.</li>
+                        <li>Preferencias guardadas y favoritos.</li>
+                        <li>Imágenes de perfil y contenido subido.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+                    <h3 class="font-bold text-gray-900 mb-4">Pasos para solicitar la baja:</h3>
+                    <ol class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">1</span>
+                            <span class="text-sm text-gray-600">Envía un correo desde la dirección asociada a tu cuenta.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">2</span>
+                            <span class="text-sm text-gray-600">Nuestro equipo de seguridad verificará tu identidad.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">3</span>
+                            <span class="text-sm text-gray-600">Tus datos serán purgados de nuestros servidores en <strong class="text-gray-900">72 horas hábiles</strong>.</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <a href="mailto:soporte@cercamio.app?subject=SOLICITUD BAJA DE CUENTA&body=Hola equipo de seguridad,%0D%0A%0D%0ADeseo solicitar la eliminación permanente de mi cuenta y mis datos personales.%0D%0A%0D%0AMi email asociado es: [Escribir aquí]%0D%0A%0D%0AMuchas gracias." 
+                   class="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-red-500/20 text-center">
+                    <i class="fas fa-envelope mr-2"></i> Enviar Solicitud por Email
+                </a>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-100">
+                <a href="/" class="text-gray-400 hover:text-gray-600 text-sm font-medium transition">
+                    <i class="fas fa-arrow-left mr-1"></i> Volver al inicio
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>
