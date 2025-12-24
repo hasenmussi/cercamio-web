@@ -1,128 +1,286 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets'; // <--- Importar componente
-import appMockup from '../assets/app-mockup.png'; // <--- Importar tu foto
+import { Image } from 'astro:assets';
+import appMockup from '../assets/app-mockup.png';
 ---
 
 <Layout title="CercaMío - Tu barrio, conectado.">
 	
-    <!-- HERO SECTION (VISIÓN) -->
-    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-blue-50/50 via-white to-white overflow-hidden relative">
-        <!-- Decoración de fondo -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-orange-50/50 to-transparent -z-10"></div>
+    <!-- 1. HERO SECTION (V2.0 - Coming Soon) -->
+    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden relative">
+        
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-orange-100/40 to-transparent -z-10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-tr from-blue-100/40 to-transparent -z-10 blur-3xl"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
             
-            <!-- Texto de Venta -->
-            <div class="md:w-1/2 text-center md:text-left z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-50 border border-blue-100 rounded-full">
-                    <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-                    Disponible en Google Play
+            <!-- TEXTO HERO -->
+            <div class="w-full md:w-1/2 text-center md:text-left z-10 relative">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-widest text-orange-600 uppercase bg-orange-50 border border-orange-100 rounded-full shadow-sm">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    La evolución del comercio local
                 </div>
                 
-                <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-6">
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-6 tracking-tight">
                     Tu barrio, <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">conectado.</span>
                 </h1>
                 
-                <p class="text-xl text-gray-500 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                <p class="text-xl text-gray-600 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed font-medium">
                     La SuperApp que une a vecinos con comercios, servicios y oportunidades cercanas. Descubre, compra y conecta en segundos.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start" id="descargar">
-                    <a href="#" class="group flex items-center justify-center bg-black text-white px-8 py-4 rounded-2xl hover:bg-gray-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                        <i class="fab fa-google-play text-3xl mr-4 group-hover:text-green-400 transition-colors"></i>
-                        <div class="text-left">
-                            <div class="text-[10px] uppercase tracking-wider opacity-70">Descárgala en</div>
-                            <div class="font-bold text-xl leading-none">Google Play</div>
+                <!-- ZONA DE DESCARGA (CON BLOQUEO "PRÓXIMAMENTE") -->
+                <div class="relative inline-block group">
+                    <!-- Botón "Falso" de fondo para estructura -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start opacity-50 blur-[2px] grayscale transition duration-500">
+                        <a href="#" class="flex items-center justify-center bg-black text-white px-8 py-4 rounded-2xl cursor-default">
+                            <i class="fab fa-google-play text-3xl mr-4"></i>
+                            <div class="text-left">
+                                <div class="text-[10px] uppercase tracking-wider">Disponible en</div>
+                                <div class="font-bold text-xl leading-none">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- OVERLAY "PRÓXIMAMENTE" -->
+                    <div class="absolute inset-0 flex items-center justify-center md:justify-start">
+                        <div class="bg-white/90 backdrop-blur-md border border-white/20 shadow-xl px-6 py-3 rounded-full flex items-center gap-3 transform hover:scale-105 transition duration-300 cursor-default">
+                            <span class="text-2xl">🚀</span>
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 leading-none">¡Lanzamiento Inminente!</p>
+                                <p class="text-[10px] text-gray-500 font-medium uppercase tracking-wide mt-1">Muy pronto en tu ciudad</p>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
+
             </div>
 
-            <!-- COLUMNA DERECHA: Imagen Mockup -->
+            <!-- IMAGEN MOCKUP (GIGANTE) -->
             <div class="w-full md:w-1/2 flex justify-center relative mt-12 md:mt-0">
-                
-                <!-- Círculo de luz decorativo -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-blue-400/30 to-orange-400/30 rounded-full blur-3xl -z-10"></div>
-                
-                <!-- TU IMAGEN REAL -->
-                <div class="relative transform rotate-[-6deg] hover:rotate-0 transition-transform duration-700 ease-out">
+                <div class="relative transform rotate-[-6deg] hover:rotate-0 transition-transform duration-700 ease-out z-10">
                     <Image 
                         src={appMockup} 
                         alt="Captura de pantalla de CercaMío" 
                         class="w-[280px] md:w-[320px] h-auto drop-shadow-2xl"
                         width={600} 
                         quality="high"
+                        loading="eager" 
                     />
-                    
-                    <!-- Elemento flotante decorativo -->
-                    <div class="absolute -right-8 top-20 bg-white p-3 rounded-2xl shadow-xl animate-bounce hidden md:block">
+                    <!-- Badge Flotante -->
+                        <div class="absolute -right-8 top-20 bg-white p-3 rounded-2xl shadow-xl animate-bounce hidden md:block">
                         <span class="text-2xl">🔥</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- CARACTERÍSTICAS GLOBALES -->
-    <section class="py-24 bg-white">
+    <!-- 2. MAPA INTELIGENTE (DESTACADO V2) -->
+    <section class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">Todo lo que necesitas, cerca de ti.</h2>
-                <p class="text-gray-500 text-lg">Hemos reinventado la forma en que interactúas con tu entorno local. Sin importar dónde estés.</p>
+            <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-[2.5rem] p-8 md:p-16 text-white shadow-2xl relative overflow-hidden group">
+                
+                <!-- Fondo decorativo mapa -->
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/map-markers.png')]"></div>
+                
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-3/5">
+                        <div class="inline-flex items-center gap-2 bg-blue-500/30 backdrop-blur-sm px-4 py-1.5 rounded-full text-blue-100 text-sm font-bold mb-6 border border-blue-400/30">
+                            <i class="fas fa-map-marked-alt"></i> La función estrella
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                            Ser visto por toda la ciudad <br>nunca fue tan fácil.
+                        </h2>
+                        <p class="text-blue-100 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl">
+                            Ya sea que tengas una ferretería, vendas tortas desde casa o seas plomero. 
+                            Nuestro <strong>Mapa Inteligente</strong> y el feed <strong>Explorar</strong> te ponen en el radar de miles de vecinos en tiempo real.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fas fa-store text-orange-400"></i>
+                                <span class="font-medium">Locales</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fas fa-tools text-green-400"></i>
+                                <span class="font-medium">Servicios</span>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10 flex items-center gap-3">
+                                <i class="fas fa-cookie-bite text-pink-400"></i>
+                                <span class="font-medium">Emprendedores</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Icono Gigante 3D -->
+                    <div class="md:w-2/5 flex justify-center">
+                        <div class="w-48 h-48 md:w-64 md:h-64 bg-white/10 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(255,255,255,0.2)] group-hover:scale-110 transition duration-500">
+                            <i class="fas fa-location-dot text-8xl md:text-9xl text-orange-500 drop-shadow-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN PARA COMPRADORES (CLARA Y AMIGABLE) -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Para Vecinos</span>
+                <h2 class="text-4xl font-extrabold text-gray-900 mt-2">Compra mejor, vive mejor.</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Diseñamos una experiencia de compra pensada para ahorrarte tiempo y dinero.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-100 transition duration-300 group">
-                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition">
-                        <i class="fas fa-map-location-dot text-3xl"></i>
+                <!-- Beneficio 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 text-orange-500 text-2xl group-hover:scale-110 transition">
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Mapa Inteligente</h3>
-                    <p class="text-gray-500 leading-relaxed">Geolocalización precisa para encontrar comercios abiertos y servicios profesionales a metros de tu ubicación.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ofertas Flash</h3>
+                    <p class="text-gray-500 text-sm">Accede a descuentos explosivos por tiempo limitado. Busca el fueguito 🔥 en el mapa y ahorra.</p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange-100 transition duration-300 group">
-                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 text-orange-500 group-hover:scale-110 transition">
-                        <i class="fas fa-bolt text-3xl"></i>
+                <!-- Beneficio 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 text-2xl group-hover:scale-110 transition">
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Ofertas Flash</h3>
-                    <p class="text-gray-500 leading-relaxed">Accede a descuentos por tiempo limitado en tu zona. Ahorra dinero en tus compras diarias.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Megáfono Barrial</h3>
+                    <p class="text-gray-500 text-sm">¿Buscas algo específico? Pregunta a todos los comercios a la vez y recibe presupuestos al instante.</p>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-green-100 transition duration-300 group">
-                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 text-green-600 group-hover:scale-110 transition">
-                        <i class="fas fa-hand-holding-dollar text-3xl"></i>
+                <!-- Beneficio 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition group">
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 text-red-500 text-2xl group-hover:scale-110 transition">
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Compra & Vende</h3>
-                    <p class="text-gray-500 leading-relaxed">Una plataforma completa para consumidores y comerciantes. Pagos seguros, gestión de stock y más.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tus Favoritos</h3>
+                    <p class="text-gray-500 text-sm">Guarda los locales que amas. Entérate primero de sus novedades, cambios de horario y promos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN PARA VENDEDORES (OSCURA Y PRO) -->
+    <section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Decoración -->
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+                <div class="md:w-1/2">
+                    <span class="text-orange-500 font-bold tracking-wider uppercase text-sm">Para Comercios y Profesionales</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold mt-2 leading-tight">Potencia tu negocio.<br>Domina tu zona.</h2>
+                </div>
+                <div class="md:w-1/2 md:text-right">
+                    <p class="text-gray-400 text-lg max-w-md ml-auto">
+                        Herramientas profesionales para vender más, fidelizar clientes y gestionar tu stock desde el celular o la web.
+                    </p>
+                    <a href="https://panel.cercamio.app" class="inline-block mt-6 bg-white text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+                        Acceder al Panel Web
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800 transition">
+                    <i class="fas fa-camera text-purple-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Historias</h3>
+                    <p class="text-gray-400 text-xs">Sube fotos de tus productos o trabajos realizados al feed Explorar.</p>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800 transition">
+                    <i class="fas fa-rocket text-amber-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Misiones Rockstar</h3>
+                    <p class="text-gray-400 text-xs">Completa retos, sube de nivel y desbloquea beneficios premium gratis.</p>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800 transition">
+                    <i class="fas fa-tags text-green-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Marketing</h3>
+                    <p class="text-gray-400 text-xs">Crea Ofertas Flash y Especiales para liquidar stock rápidamente.</p>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:bg-gray-800 transition">
+                    <i class="fas fa-comments text-blue-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Interacción</h3>
+                    <p class="text-gray-400 text-xs">Responde preguntas y atiende solicitudes del Megáfono en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROGRAMA DE SOCIOS (TRANSPARENCIA) -->
+    <section class="py-24 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-green-100 flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/3 flex justify-center">
+                    <div class="w-40 h-40 bg-green-100 rounded-full flex items-center justify-center relative">
+                        <i class="fas fa-handshake text-6xl text-green-600"></i>
+                        <div class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            Sin inversión
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Programa de Socios</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        ¿Buscas generar ingresos extra de forma independiente? <br>
+                        Ayúdanos a digitalizar la ciudad. Invita comercios a unirse a CercaMío y gana comisiones por su actividad.
+                    </p>
+                    
+                    <div class="flex flex-col gap-3 bg-green-50/50 p-4 rounded-xl border border-green-100 mb-6">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <p class="text-sm text-gray-700"><strong>Simple:</strong> Comparte tu código con negocios.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <p class="text-sm text-gray-700"><strong>Transparente:</strong> No es multinivel ni hay letras chicas. Ganas por Digitalizar.</p>
+                        </div>
+                    </div>
+
+                    <!-- ACCIÓN ACTIVA (V2.0) -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
+                        
+                        <!-- Botón principal: Lleva a descargar la app -->
+                        <a href="#descargar" class="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-500/20 flex items-center gap-2">
+                            Quiero ser Socio <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+
+                        <!-- Instrucción visual -->
+                        <div class="flex items-center gap-2 text-sm text-green-800 bg-green-100 px-4 py-2 rounded-lg border border-green-200">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Ve a <strong>Mi Perfil</strong> en la App</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CALL TO ACTION -->
-    <section class="py-20 bg-gray-900 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+<section class="py-20 bg-gray-900 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+        <h2 class="text-3xl lg:text-5xl font-bold text-white mb-8">Empieza a digitalizar tu barrio hoy.</h2>
+        <p class="text-gray-400 mb-10 text-lg">Únete a la comunidad de comercios y vecinos que ya están conectados.</p>
         
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl lg:text-5xl font-bold text-white mb-8">Empieza a digitalizar tu barrio hoy.</h2>
-            <p class="text-gray-400 mb-10 text-lg">Únete a la comunidad de comercios y vecinos que ya están conectados.</p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://panel.cercamio.app" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition">
-                    Soy Vendedor
-                </a>
-                <a href="#descargar" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-500/30">
-                    Descargar App
-                </a>
-            </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://panel.cercamio.app" class="bg-white text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition">
+                Soy Vendedor
+            </a>
+            <a href="#descargar" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-500/30">
+                Descargar App
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
 </Layout>

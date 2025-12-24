@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.16.6",
+    "caniuse-lite": "^1.0.30001761",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
