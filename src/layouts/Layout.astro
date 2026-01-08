@@ -1,5 +1,5 @@
 ---
-// 1. Importación de estilos globales (NECESARIO PARA TAILWIND)
+// 1. Importación de estilos globales
 import '../styles/global.css';
 
 interface Props {
@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>{title}</title>
         <!-- Iconos FontAwesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 	</head>
 	<body class="font-sans text-gray-800 bg-white">
         
@@ -28,10 +28,7 @@ const { title } = Astro.props;
                 <div class="flex justify-between h-16 items-center">
                     <!-- Logo -->
 					<a href="/" class="flex items-center gap-2 group">
-						<!-- IMAGEN DEL LOGO -->
 						<img src="/favicon.png" alt="Logo CercaMío" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-300" />
-						
-						<!-- TEXTO (Junto y con colores) -->
 						<span class="text-2xl font-extrabold tracking-tight">
 							<span class="text-blue-600">Cerca</span><span class="text-orange-500">Mío</span>
 						</span>
@@ -50,31 +47,54 @@ const { title } = Astro.props;
             </div>
         </nav>
 
-        <!-- CONTENIDO DINÁMICO -->
+        <!-- CONTENIDO -->
 		<slot />
 
-        <!-- FOOTER GLOBAL -->
+        <!-- FOOTER GLOBAL (ACTUALIZADO V3.0) 🌐 -->
         <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
             <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
-                <div class="col-span-1 md:col-span-2">
+                
+                <!-- COLUMNA 1: MARCA -->
+                <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-4">
-					    <img src="/favicon.png" alt="Logo" class="w-8 h-8 brightness-0 invert opacity-90" /> <!-- Logo blanco -->
-					    <span class="text-2xl font-bold text-white tracking-tight">
-						    CercaMío
-					    </span>
+					    <img src="/favicon.png" alt="Logo" class="w-8 h-8 brightness-0 invert opacity-90" />
+					    <span class="text-2xl font-bold text-white tracking-tight">CercaMío</span>
 					</div>
-                    <p class="text-sm leading-relaxed max-w-xs text-gray-500">
-                        La plataforma que digitaliza el comercio de cercanía.
-                        Potenciamos economías locales conectando vecinos con negocios reales.
+                    <p class="text-sm leading-relaxed text-gray-500 mb-6">
+                        El sistema operativo del comercio local.<br>Comodoro Rivadavia, Argentina.
                     </p>
+                    
+                    <!-- REDES SOCIALES (ICONOS) -->
+                    <div class="flex gap-4">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1DgGMjFT5A/" target="_blank" class="social-link w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-[#1877F2] transition duration-300" data-app="fb://facewebmodal/f?href=https://www.facebook.com/share/1DgGMjFT5A/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/cercamio.app" target="_blank" class="social-link w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-orange-500 hover:via-pink-500 hover:to-purple-600 transition duration-300" data-app="instagram://user?username=cercamio.app">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com/@cercamio.app" target="_blank" class="social-link w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black hover:text-cyan-400 transition duration-300 border border-transparent hover:border-cyan-400" data-app="snssdk1233://user/profile/cercamio.app">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com/CercaMioApp" target="_blank" class="social-link w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-black border border-transparent hover:border-white transition duration-300" data-app="twitter://user?screen_name=CercaMioApp">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- COLUMNA 2: LEGAL -->
                 <div>
                     <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-xs">Legal</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="/privacidad" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-shield-alt text-xs"></i> Política de Privacidad</a></li>
-                        <li><a href="/privacidad" class="hover:text-white transition">Términos y Condiciones</a></li>
+                        <li><a href="/privacidad" class="hover:text-white transition flex items-center gap-2">Política de Privacidad</a></li>
+                        <li><a href="/privacidad#terminos" class="hover:text-white transition">Términos y Condiciones</a></li>
                     </ul>
                 </div>
+
+                <!-- COLUMNA 3: AYUDA -->
                 <div>
                     <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-xs">Ayuda</h4>
                     <ul class="space-y-3 text-sm">
@@ -82,12 +102,53 @@ const { title } = Astro.props;
                         <li><a href="mailto:soporte@cercamio.app" class="hover:text-white transition">Centro de Soporte</a></li>
                     </ul>
                 </div>
+
+                <!-- COLUMNA 4: DESCARGA -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-xs">Obtén la App</h4>
+                    <a href="https://play.google.com/store/apps/details?id=com.cercamio.app" target="_blank" class="block w-40 opacity-80 hover:opacity-100 transition">
+                         <!-- Botón CSS puro simulando imagen -->
+                         <div class="bg-white/10 border border-white/20 rounded-lg p-2 flex items-center gap-2">
+                             <i class="fab fa-google-play text-2xl text-white"></i>
+                             <div class="text-left">
+                                 <div class="text-[8px] uppercase text-gray-400">Disponible en</div>
+                                 <div class="text-xs font-bold text-white">Google Play</div>
+                             </div>
+                         </div>
+                    </a>
+                </div>
+
             </div>
             
-            <!-- CIERRE DE FOOTER (Esto faltaba) -->
             <div class="text-center text-xs mt-16 pt-8 border-t border-gray-800 text-gray-600">
                 &copy; 2026 CercaMío. Todos los derechos reservados.
             </div>
         </footer>
+
+        <!-- SCRIPT INTELIGENTE: WEB vs APP 🧠 -->
+        <script is:inline>
+            // Detectar si es móvil
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                const socialLinks = document.querySelectorAll('.social-link');
+                
+                socialLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Intentamos abrir la app primero
+                        const appUrl = link.getAttribute('data-app');
+                        if (appUrl) {
+                            // Guardamos la URL web por si falla
+                            const webUrl = link.href;
+                            
+                            // Truco: Intentar abrir App, si tarda mucho, el navegador seguirá en la web
+                            // Nota: Los navegadores modernos a veces bloquean esto, pero es el mejor intento sin servidor.
+                            // La mejor UX hoy en día es dejar el link HTTPS y que el OS decida, 
+                            // pero mantenemos el href=HTTPS para fallback seguro.
+                        }
+                    });
+                });
+            }
+        </script>
 	</body>
 </html>
