@@ -1,4 +1,7 @@
 ---
+// 1. Importación de estilos globales (NECESARIO PARA TAILWIND)
+import '../styles/global.css';
+
 interface Props {
 	title: string;
 }
@@ -26,7 +29,7 @@ const { title } = Astro.props;
                     <!-- Logo -->
 					<a href="/" class="flex items-center gap-2 group">
 						<!-- IMAGEN DEL LOGO -->
-						<img src="/favicon.png" alt="Logo CercaMío" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-300">
+						<img src="/favicon.png" alt="Logo CercaMío" class="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-300" />
 						
 						<!-- TEXTO (Junto y con colores) -->
 						<span class="text-2xl font-extrabold tracking-tight">
@@ -55,10 +58,10 @@ const { title } = Astro.props;
             <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-2 mb-4">
-					<img src="/favicon.png" alt="Logo" class="w-8 h-8 brightness-0 invert opacity-90"> <!-- Logo blanco -->
-					<span class="text-2xl font-bold text-white tracking-tight">
-						CercaMío
-					</span>
+					    <img src="/favicon.png" alt="Logo" class="w-8 h-8 brightness-0 invert opacity-90" /> <!-- Logo blanco -->
+					    <span class="text-2xl font-bold text-white tracking-tight">
+						    CercaMío
+					    </span>
 					</div>
                     <p class="text-sm leading-relaxed max-w-xs text-gray-500">
                         La plataforma que digitaliza el comercio de cercanía.
@@ -80,8 +83,10 @@ const { title } = Astro.props;
                     </ul>
                 </div>
             </div>
+            
+            <!-- CIERRE DE FOOTER (Esto faltaba) -->
             <div class="text-center text-xs mt-16 pt-8 border-t border-gray-800 text-gray-600">
-                &copy; 2025 CercaMío. Hecho con ❤️ para potenciar tu barrio.
+                &copy; 2026 CercaMío. Todos los derechos reservados.
             </div>
         </footer>
 	</body>

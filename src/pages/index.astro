@@ -277,52 +277,289 @@ import appMockup from '../assets/app-mockup.png';
         </div>
     </section>
 
-    <!-- 5. PROGRAMA DE SOCIOS (TRANSPARENCIA) -->
-    <section class="py-24 bg-gradient-to-b from-green-50 to-white">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-green-100 flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/3 flex justify-center">
-                    <div class="w-40 h-40 bg-green-100 rounded-full flex items-center justify-center relative">
-                        <i class="fas fa-handshake text-6xl text-green-600"></i>
-                        <div class="absolute -top-2 -right-2 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                            Sin inversión
+    <!-- 6. NUESTRO PROPÓSITO (IMPACTO SOCIAL & ROADMAP) ❤️ -->
+    <section class="py-24 bg-gradient-to-br from-indigo-900 to-slate-900 text-white relative overflow-hidden">
+        
+        <!-- Decoración sutil -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent opacity-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold tracking-widest uppercase mb-4 text-pink-300">
+                    Más que una App
+                </span>
+                <h2 class="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">
+                    Tu compra tiene poder.
+                </h2>
+                <p class="text-lg text-indigo-200 leading-relaxed">
+                    CercaMío es un motor de regeneración social. Cada vez que usas la app, estás financiando el futuro de tu comunidad. Estas son nuestras metas:
+                </p>
+            </div>
+
+            <!-- TARJETAS DE PROYECTOS (FUTURO) -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- CAUSA 1: REFUGIO (Vida) -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition duration-500 hover:-translate-y-2 group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-pink-500/20 text-pink-300 text-[10px] font-bold px-2 py-1 rounded border border-pink-500/30">
+                        META 2028
+                    </div>
+                    <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-paw text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Refugio Modelo</h3>
+                    <p class="text-indigo-200 text-sm leading-relaxed mb-6">
+                        Construiremos un centro de rescate y rehabilitación animal de vanguardia. Vacunación, Castración, Entrenamiento, y adopción responsable.
+                    </p>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-pink-500 h-2 rounded-full w-[1%]"></div> 
+                    </div>
+                    <p class="text-xs text-pink-300 font-bold uppercase tracking-wider">Fase: Recaudación Inicial</p>
+                </div>
+
+                <!-- CAUSA 2: OPORTUNIDAD (Personas) -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition duration-500 hover:-translate-y-2 group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2 py-1 rounded border border-blue-500/30">
+                        META 2028
+                    </div>
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-user-graduate text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Academia de Oficios</h3>
+                    <p class="text-indigo-200 text-sm leading-relaxed mb-6">
+                        Un hogar-escuela para personas en situación de calle. Capacitación técnica y financiamiento para que lancen sus propios micro-negocios en la App.
+                    </p>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-blue-500 h-2 rounded-full w-[1%]"></div>
+                    </div>
+                    <p class="text-xs text-blue-300 font-bold uppercase tracking-wider">Fase: Planificación</p>
+                </div>
+
+                <!-- CAUSA 3: CRECIMIENTO (Comercios) -->
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition duration-500 hover:-translate-y-2 group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-1 rounded border border-amber-500/30">
+                        META 2027
+                    </div>
+                    <div class="w-16 h-16 bg-amber-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-hand-holding-dollar text-3xl text-amber-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Fondo de Crédito</h3>
+                    <p class="text-indigo-200 text-sm leading-relaxed mb-6">
+                        Micro-créditos a tasa justa para nuestros vendedores. Financiaremos la compra de stock o mejoras del local con las propias ganancias de la plataforma.
+                    </p>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-amber-500 h-2 rounded-full w-[5%]"></div>
+                    </div>
+                    <p class="text-xs text-amber-300 font-bold uppercase tracking-wider">Fase: Estructuración</p>
+                </div>
+
+            </div>
+
+            <!-- ROADMAP VISUAL (LÍNEA DE TIEMPO ACTUALIZADA) 🗺️ -->
+            <div class="mt-24">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold text-white">Nuestra Hoja de Ruta</h3>
+                    <div class="h-1 w-20 bg-pink-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    
+                    <!-- HITO 1: 2026 (EL PRESENTE) -->
+                    <div class="flex gap-6">
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center shadow-[0_0_15px_rgba(236,72,153,0.6)] z-10">
+                                <i class="fas fa-rocket text-white text-xs"></i>
+                            </div>
+                            <div class="w-0.5 h-full bg-gradient-to-b from-pink-500 to-white/10"></div>
+                        </div>
+                        <div class="pb-12">
+                            <span class="text-pink-300 font-bold text-sm tracking-widest">ENERO • 2026</span>
+                            <h4 class="text-xl font-bold text-white mt-1">Lanzamiento Oficial</h4>
+                            <p class="text-indigo-200 text-sm mt-2 leading-relaxed">
+                                Apertura a producción en Comodoro Rivadavia. Activación del ecosistema digital, sistema de socios y validación del modelo híbrido.
+                            </p>
                         </div>
                     </div>
+
+                    <!-- HITO 2: 2027 (EXPANSIÓN) -->
+                    <div class="flex gap-6">
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-white/20 flex items-center justify-center z-10">
+                                <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                            </div>
+                            <div class="w-0.5 h-full bg-white/10"></div>
+                        </div>
+                        <div class="pb-12 opacity-90">
+                            <span class="text-amber-300 font-bold text-sm tracking-widest">PROYECCIÓN • 2027</span>
+                            <h4 class="text-xl font-bold text-white mt-1">Fondo de Crédito & Regionalización</h4>
+                            <p class="text-indigo-200 text-sm mt-2 leading-relaxed">
+                                Expansión a ciudades satélite de la Patagonia. Lanzamiento del programa de micro-créditos para potenciar a los comerciantes de la red.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- HITO 3: 2028 (VISIÓN FÍSICA) -->
+                    <div class="flex gap-6">
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-white/10 flex items-center justify-center z-10">
+                                <i class="fas fa-star text-white/30 text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="opacity-60">
+                            <span class="text-blue-300 font-bold text-sm tracking-widest">VISIÓN • 2028</span>
+                            <h4 class="text-xl font-bold text-white mt-1">Impacto Social Tangible</h4>
+                            <p class="text-indigo-200 text-sm mt-2 leading-relaxed">
+                                Inauguración de las primeras sedes físicas: El Refugio Modelo y la Academia de Oficios, financiados por el éxito sostenible de la plataforma.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="md:w-2/3">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Programa de Socios</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        ¿Buscas generar ingresos extra de forma independiente? <br>
-                        Ayúdanos a digitalizar la ciudad. Invita comercios a unirse a CercaMío y gana comisiones por su actividad.
+
+                <!-- FRASE FINAL -->
+                <div class="text-center mt-16 pt-8 border-t border-white/5">
+                    <p class="text-xl font-serif italic text-white/60">
+                        "No construimos una empresa para ganar dinero. Ganamos dinero para construir una comunidad mejor."
+                    </p>
+                    <div class="flex justify-center gap-4 mt-6">
+                     <!-- Badge Transparencia -->
+                     <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-xs text-white border border-white/10 hover:bg-white/10 transition cursor-help" title="Información pública disponible pronto">
+                        <i class="fas fa-check-circle text-green-400"></i> Modelo de Transparencia 100%
+                     </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. PROGRAMA DE SOCIOS & EMBAJADORES (MODELO DE AFILIADOS) 🤝 -->
+    <section class="py-24 bg-gradient-to-b from-emerald-50 via-white to-white relative overflow-hidden">
+        
+        <!-- Fondo decorativo -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-green-200/20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-10 w-40 h-40 bg-orange-200/20 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- COLUMNA IZQUIERDA: TEXTO Y CTA -->
+                <div>
+                    <span class="text-emerald-600 font-bold tracking-wider uppercase text-sm mb-2 block">Crecimiento Profesional</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        Genera ingresos pasivos digitalizando tu ciudad.
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Conviértete en Socio de CercaMío. Invita a comercios a unirse a la plataforma y gana una comisión perpetua por cada venta que ellos realicen.
                     </p>
                     
-                    <div class="flex flex-col gap-3 bg-green-50/50 p-4 rounded-xl border border-green-100 mb-6">
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
-                            <p class="text-sm text-gray-700"><strong>Simple:</strong> Comparte tu código con negocios.</p>
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Modelo de Afiliados Directos</h4>
+                                <p class="text-sm text-gray-500">Sin esquemas complejos. Tú registras al comercio, tú cobras la comisión. 100% transparente.</p>
+                            </div>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
-                            <p class="text-sm text-gray-700"><strong>Transparente:</strong> No es multinivel ni hay letras chicas. Ganas por Digitalizar.</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sin Inversión Inicial</h4>
+                                <p class="text-sm text-gray-500">Tu capital es tu capacidad de gestión. Empieza gratis hoy mismo.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- ACCIÓN ACTIVA (V2.0) -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4 mt-8">
-                        
-                        <!-- Botón principal: Lleva a descargar la app -->
-                        <a href="#descargar" class="bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-500/20 flex items-center gap-2">
+                    <!-- ACCIÓN (Botonera) -->
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <a href="#descargar" class="w-full sm:w-auto bg-emerald-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
                             Quiero ser Socio <i class="fas fa-chevron-right text-xs"></i>
                         </a>
-
-                        <!-- Instrucción visual -->
-                        <div class="flex items-center gap-2 text-sm text-green-800 bg-green-100 px-4 py-2 rounded-lg border border-green-200">
+                        <div class="flex items-center gap-2 text-xs font-medium text-emerald-800 bg-emerald-100/50 px-4 py-2 rounded-lg border border-emerald-100">
                             <i class="fas fa-mobile-alt"></i>
-                            <span>Ve a <strong>Mi Perfil</strong> en la App</span>
+                            <span>Actívalo en <strong>Mi Perfil</strong> de la App</span>
                         </div>
-
                     </div>
                 </div>
+
+                <!-- COLUMNA DERECHA: LA ESCALERA DE NIVELES (GAMIFICACIÓN) -->
+                <div class="relative">
+                    <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-gray-100 relative z-10">
+                        <div class="text-center mb-8">
+                            <h3 class="text-xl font-bold text-gray-800">Plan de Carrera</h3>
+                            <p class="text-sm text-gray-500">Escala niveles según la cantidad de comercios activos.</p>
+                        </div>
+
+                        <!-- Nivel 1: Bronce -->
+                        <div class="flex items-center gap-4 mb-6 opacity-70 grayscale hover:grayscale-0 transition duration-300">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-700/10 flex items-center justify-center text-amber-800 border border-amber-700/20">
+                                <i class="fas fa-medal text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-bold text-gray-700">Bronce</span>
+                                    <span class="text-amber-800 font-bold">5% Comisión</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-2">
+                                    <div class="bg-amber-700 h-2 rounded-full w-full"></div>
+                                </div>
+                                <p class="text-[10px] text-gray-400 mt-1">Nivel Inicial</p>
+                            </div>
+                        </div>
+
+                        <!-- Nivel 2: Oro (Destacado) -->
+                        <div class="flex items-center gap-4 mb-6 transform scale-105 bg-white p-4 rounded-xl shadow-lg border-l-4 border-yellow-400">
+                            <div class="w-12 h-12 rounded-2xl bg-yellow-100 flex items-center justify-center text-yellow-600">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-bold text-gray-900">Oro</span>
+                                    <span class="text-yellow-600 font-bold">10% Comisión</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-2">
+                                    <div class="bg-yellow-400 h-2 rounded-full w-2/3"></div>
+                                </div>
+                                <p class="text-[10px] text-gray-400 mt-1">30+ Comercios Activos</p>
+                            </div>
+                        </div>
+
+                        <!-- Nivel 3: Diamante -->
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-100 flex items-center justify-center text-cyan-600 border border-cyan-200">
+                                <i class="fas fa-gem text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-bold text-gray-700">Diamante</span>
+                                    <span class="text-cyan-600 font-bold">15% Comisión</span>
+                                </div>
+                                <div class="w-full bg-gray-100 rounded-full h-2">
+                                    <div class="bg-cyan-400 h-2 rounded-full w-1/3"></div>
+                                </div>
+                                <p class="text-[10px] text-gray-400 mt-1">100+ Comercios Activos</p>
+                            </div>
+                        </div>
+
+                        <!-- Nota al pie -->
+                        <div class="mt-8 pt-6 border-t border-gray-100 text-center">
+                            <p class="text-xs text-gray-400 italic">
+                                * Las comisiones se calculan sobre el revenue neto de la plataforma. Pagos semanales/mensuales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Elemento decorativo detrás -->
+                    <div class="absolute -top-5 -right-5 w-24 h-24 bg-emerald-400 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                </div>
+
             </div>
         </div>
     </section>
