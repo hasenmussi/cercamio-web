@@ -86,14 +86,14 @@ import appMockup from '../assets/app_mockup.png';
                         <Image 
                             src={appMockup} 
                             alt="App CercaMío en funcionamiento" 
-                            class="w-[280px] md:w-[380px] lg:w-[420px] h-auto drop-shadow-2xl mx-auto relative z-10"
+                            class="w-[280px] md:w-[380px] lg:w-[420px] h-auto mx-auto relative z-10 drop-shadow-[0_35px_60px_rgba(0,0,0,0.6)] transition-all duration-500 hover:drop-shadow-[0_50px_80px_rgba(0,0,0,0.7)]"
                             width={800} 
                             quality="high"
                             loading="eager" 
                         />
 
-                        <!-- WIDGET FLOTANTE 1: Oferta -->
-                        <div class="absolute -right-6 top-20 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-white/40 animate-bounce z-20 hidden md:block" style="animation-duration: 3s;">
+                        <!-- WIDGET FLOTANTE 1: Oferta (Visible en Móvil) -->
+                        <div class="absolute -right-2 md:-right-6 top-10 md:top-20 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-white/40 animate-bounce z-20 scale-90 md:scale-100" style="animation-duration: 3s;">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">
                                     <i class="fas fa-fire"></i>
@@ -105,8 +105,8 @@ import appMockup from '../assets/app_mockup.png';
                             </div>
                         </div>
 
-                        <!-- WIDGET FLOTANTE 2: Agenda -->
-                        <div class="absolute -left-10 bottom-32 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-white/40 z-20 animate-pulse hidden md:block" style="animation-duration: 4s;">
+                        <!-- WIDGET FLOTANTE 2: Agenda (Visible en Móvil) -->
+                        <div class="absolute -left-2 md:-left-10 bottom-10 md:bottom-32 bg-white/95 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-white/40 z-20 animate-pulse scale-90 md:scale-100" style="animation-duration: 4s;">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
                                     <i class="fas fa-calendar-check"></i>
