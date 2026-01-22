@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nuestra Misión | CercaMío">
+    
+    <!-- HERO DE MISIÓN -->
+    <header class="pt-32 pb-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="text-pink-400 font-bold tracking-widest uppercase text-sm mb-4 block">Nuestro Norte</span>
+            <h1 class="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                Tecnología con <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">Impacto Social.</span>
+            </h1>
+            <p class="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                No construimos una empresa para ganar dinero. Ganamos dinero para construir una comunidad mejor. Conoce cómo cada transacción en CercaMío regenera el tejido social.
+            </p>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: CAUSAS SOCIALES (MIGRADA DEL HOME) -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Nuestros Pilares de Regeneración</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    Destinamos parte del revenue de la plataforma a financiar proyectos tangibles en las ciudades donde operamos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- CAUSA 1 -->
+                <div class="bg-pink-50/50 p-8 rounded-3xl border border-pink-100 hover:shadow-xl transition duration-500 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-pink-100 text-pink-500 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Refugio Modelo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Construcción de centros de rescate y rehabilitación animal. Vacunación, castración y adopción responsable financiada por la comunidad.
+                    </p>
+                    <div class="w-full bg-slate-200 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-pink-500 h-2 rounded-full w-[5%]"></div> 
+                    </div>
+                    <p class="text-xs text-pink-600 font-bold uppercase tracking-wider">Meta 2028</p>
+                </div>
+
+                <!-- CAUSA 2 -->
+                <div class="bg-blue-50/50 p-8 rounded-3xl border border-blue-100 hover:shadow-xl transition duration-500 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Academia de Oficios</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Hogar-escuela para reinserción social. Capacitación técnica en oficios y financiamiento para lanzar micro-negocios en la App.
+                    </p>
+                    <div class="w-full bg-slate-200 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-blue-500 h-2 rounded-full w-[10%]"></div>
+                    </div>
+                    <p class="text-xs text-blue-600 font-bold uppercase tracking-wider">Meta 2028</p>
+                </div>
+
+                <!-- CAUSA 3 -->
+                <div class="bg-amber-50/50 p-8 rounded-3xl border border-amber-100 hover:shadow-xl transition duration-500 hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-amber-100 text-amber-500 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Fondo de Crédito</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Micro-créditos a tasa justa para vendedores de la plataforma. Financiamos stock y mejoras edilicias para potenciar el comercio local.
+                    </p>
+                    <div class="w-full bg-slate-200 rounded-full h-2 mb-2 overflow-hidden">
+                        <div class="bg-amber-500 h-2 rounded-full w-[15%]"></div>
+                    </div>
+                    <p class="text-xs text-amber-600 font-bold uppercase tracking-wider">Meta 2027</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: ROADMAP VISUAL (MIGRADA DEL HOME) -->
+    <section class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Hoja de Ruta</h2>
+                <div class="h-1 w-20 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                
+                <!-- HITO 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-blue-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <i class="fas fa-rocket text-white text-xs"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-slate-900">Lanzamiento Oficial</h3>
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">2026</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Apertura en Comodoro Rivadavia. Activación del ecosistema digital (App + Web) y validación del modelo híbrido Productos/Servicios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HITO 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <span class="w-2 h-2 bg-slate-500 rounded-full"></span>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm opacity-80">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-slate-900">Expansión Regional</h3>
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded">2027</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Llegada a ciudades satélite de la Patagonia. Lanzamiento del programa de micro-créditos y consolidación de la red de socios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HITO 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <span class="w-2 h-2 bg-slate-500 rounded-full"></span>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm opacity-60">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-bold text-slate-900">Infraestructura Física</h3>
+                            <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-1 rounded">2028</span>
+                        </div>
+                        <p class="text-sm text-slate-500 leading-relaxed">
+                            Inauguración de las primeras sedes físicas: El Refugio Modelo y la Academia de Oficios.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</Layout>
