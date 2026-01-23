@@ -516,7 +516,7 @@ import appMockup from '../assets/app_mockup.png';
         </div>
     </section>
 
-    <!-- 3. SECCIÓN "CÓMO FUNCIONA" (SWITCH INTERACTIVO V2.0) 🔄 -->
+    <!-- 4. SECCIÓN "CÓMO FUNCIONA" (SWITCH V3.0 - GRID STACK ANIMATION) 🔄 -->
     <section class="py-24 bg-slate-50 relative overflow-hidden" id="como-funciona">
         
         <div class="max-w-7xl mx-auto px-4 relative z-10">
@@ -526,98 +526,106 @@ import appMockup from '../assets/app_mockup.png';
                 <p class="text-lg text-slate-500">Elige tu perfil y descubre cómo CercaMío cambia tu día a día.</p>
             </div>
 
-            <!-- SWITCHER (CONTROL) -->
+            <!-- SWITCHER (CONTROL Z-INDEX FIXED) -->
             <div class="flex justify-center mb-16">
-                <div class="bg-white p-2 rounded-full shadow-lg border border-slate-200 inline-flex relative">
-                    <!-- Fondo Animado (Se mueve con JS) -->
-                    <div id="switch-bg" class="absolute top-2 left-2 w-[calc(50%-8px)] h-[calc(100%-16px)] bg-blue-600 rounded-full transition-all duration-300 ease-in-out"></div>
+                <div class="bg-white p-2 rounded-full shadow-lg border border-slate-200 inline-grid grid-cols-2 relative w-[340px] sm:w-[400px]">
                     
-                    <button onclick="toggleTab('vecino')" id="btn-vecino" class="relative z-10 px-8 py-3 rounded-full text-white font-bold transition-colors duration-300 flex items-center gap-2">
+                    <!-- Fondo Animado (Píldora) -->
+                    <div id="switch-bg" class="absolute top-2 bottom-2 left-2 w-[calc(50%-8px)] bg-blue-600 rounded-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] shadow-md z-0"></div>
+                    
+                    <!-- Botón Vecino -->
+                    <button onclick="setTab('vecino')" id="btn-vecino" class="relative z-10 py-3 rounded-full font-bold text-sm sm:text-base transition-colors duration-300 flex items-center justify-center gap-2 text-white">
                         <i class="fas fa-user"></i> Soy Vecino
                     </button>
-                    <button onclick="toggleTab('vendedor')" id="btn-vendedor" class="relative z-10 px-8 py-3 rounded-full text-slate-500 font-bold transition-colors duration-300 flex items-center gap-2">
-                        <i class="fas fa-briefcase"></i> Soy Vendedor / Pro
+                    
+                    <!-- Botón Vendedor -->
+                    <button onclick="setTab('vendedor')" id="btn-vendedor" class="relative z-10 py-3 rounded-full font-bold text-sm sm:text-base transition-colors duration-300 flex items-center justify-center gap-2 text-slate-500">
+                        <i class="fas fa-briefcase"></i> Soy Vendedor
                     </button>
                 </div>
             </div>
 
-            <!-- CONTENIDO A: VECINO -->
-            <div id="content-vecino" class="grid md:grid-cols-3 gap-8 transition-opacity duration-500">
-                <!-- Paso 1 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
-                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
-                        <i class="fas fa-map-marked-alt text-blue-600"></i>
+            <!-- CONTENEDOR GRID STACK (Para transición suave sin saltos) -->
+            <div class="relative grid grid-cols-1 items-start">
+                
+                <!-- CONTENIDO A: VECINO -->
+                <div id="content-vecino" class="col-start-1 row-start-1 grid md:grid-cols-3 gap-8 transition-all duration-500 ease-in-out opacity-100 scale-100 z-10">
+                    <!-- Paso 1 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                            <i class="fas fa-map-marked-alt text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">1. Explorá tu Zona</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Activa tu GPS y descubre tesoros ocultos. Desde la rotisería de la esquina hasta el gasista matriculado que vive a dos cuadras.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">1. Explorá tu Zona</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Activa tu GPS y descubre tesoros ocultos. Desde la rotisería de la esquina hasta el gasista matriculado que vive a dos cuadras. El mapa te muestra lo que otros no ven.
-                    </p>
-                </div>
-                <!-- Paso 2 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
-                    <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
-                        <i class="fas fa-calendar-check text-indigo-600"></i>
+                    <!-- Paso 2 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                            <i class="fas fa-calendar-check text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">2. Híbrido: Pedí o Reservá</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            ¿Hambre o necesidad? Puedes pedir delivery o <strong>reservar un turno</strong> en la peluquería en la misma app. Todo se resuelve acá.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">2. Híbrido: Pedí o Reservá</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        ¿Hambre o necesidad? Puedes pedir una hamburguesa con delivery o <strong>reservar un turno</strong> en la peluquería en la misma app. Todo se resuelve acá.
-                    </p>
-                </div>
-                <!-- Paso 3 -->
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
-                    <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
-                        <i class="fas fa-hand-holding-dollar text-green-600"></i>
+                    <!-- Paso 3 -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition duration-300 group">
+                        <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition">
+                            <i class="fas fa-hand-holding-dollar text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">3. Trato Directo</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Habla directo con el dueño. Sin intermediarios costosos, accedes a precios reales y ofertas exclusivas del barrio.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">3. Trato Directo</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Habla directo con el dueño. Al eliminar intermediarios costosos, accedes a precios reales y ofertas exclusivas que solo existen en el barrio.
-                    </p>
                 </div>
-            </div>
 
-            <!-- CONTENIDO B: VENDEDOR (OCULTO POR DEFECTO) -->
-            <div id="content-vendedor" class="md:grid-cols-3 gap-8 hidden opacity-0 transition-opacity duration-500">
-                <!-- Paso 1 -->
-                <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl"></div>
-                    <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
-                        <i class="fas fa-id-card text-purple-400"></i>
+                <!-- CONTENIDO B: VENDEDOR -->
+                <div id="content-vendedor" class="col-start-1 row-start-1 grid md:grid-cols-3 gap-8 transition-all duration-500 ease-in-out opacity-0 scale-95 pointer-events-none -z-10">
+                    <!-- Paso 1 -->
+                    <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-purple-500/20 rounded-full blur-2xl"></div>
+                        <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
+                            <i class="fas fa-id-card text-purple-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">1. Registra tu Talento</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            ¿Tienes local? ¿Ofreces servicios? ¿Vendes desde casa? Crea tu perfil gratis en 2 minutos y aparece en el mapa.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">1. Registra tu Talento</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        ¿Tienes un local a la calle? ¿Ofreces servicios profesionales? ¿Vendes desde casa? Crea tu perfil gratis en 2 minutos y aparece en el mapa de tu ciudad.
-                    </p>
-                </div>
-                <!-- Paso 2 -->
-                <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/20 rounded-full blur-2xl"></div>
-                    <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
-                        <i class="fas fa-laptop-code text-blue-400"></i>
+                    <!-- Paso 2 -->
+                    <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/20 rounded-full blur-2xl"></div>
+                        <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">2. Tu Oficina Digital</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Accede a un Panel Profesional. Gestiona stock y configura tu <strong>Agenda de Turnos</strong> automática.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">2. Tu Oficina Digital</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Accede a un Panel de Control profesional. Gestiona tu stock de productos o configura tu <strong>Agenda de Turnos</strong> automática para que los clientes reserven solos.
-                    </p>
-                </div>
-                <!-- Paso 3 -->
-                <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-green-500/20 rounded-full blur-2xl"></div>
-                    <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
-                        <i class="fas fa-qrcode text-green-400"></i>
+                    <!-- Paso 3 -->
+                    <div class="bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition duration-300 group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-green-500/20 rounded-full blur-2xl"></div>
+                        <div class="w-16 h-16 bg-slate-800 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-110 transition border border-slate-700">
+                            <i class="fas fa-qrcode text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">3. Expansión Viral</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Genera tu QR oficial y comparte tu link. Tus clientes entran directo a tu perfil y compran sin fricción.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">3. Expansión Viral</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Genera tu QR oficial y comparte el link de tu tienda por WhatsApp. Tus clientes entran directo a tu perfil, ven tus historias y compran sin fricción.
-                    </p>
                 </div>
+
             </div>
 
         </div>
     </section>
 
-    <!-- SCRIPT DE INTERACTIVIDAD (SIMPLE Y ROBUSTO) -->
     <script is:inline>
-        function toggleTab(tab) {
+        function setTab(tab) {
             const bg = document.getElementById('switch-bg');
             const btnVecino = document.getElementById('btn-vecino');
             const btnVendedor = document.getElementById('btn-vendedor');
@@ -625,66 +633,46 @@ import appMockup from '../assets/app_mockup.png';
             const contentVendedor = document.getElementById('content-vendedor');
 
             if (tab === 'vecino') {
-                // 1. Mover fondo
+                // 1. Mover Fondo (Izquierda)
                 bg.style.transform = 'translateX(0)';
                 bg.classList.remove('bg-purple-600');
                 bg.classList.add('bg-blue-600');
 
-                // 2. Estilos Botones
+                // 2. Colores Texto
                 btnVecino.classList.add('text-white');
                 btnVecino.classList.remove('text-slate-500');
                 btnVendedor.classList.remove('text-white');
                 btnVendedor.classList.add('text-slate-500');
 
-                // 3. MOSTRAR VECINO
-                contentVecino.classList.remove('hidden');
-                contentVecino.classList.add('grid'); // 🔥 AGREGAMOS GRID AQUÍ
+                // 3. Transición Contenido (Cross-fade)
+                // Vecino ENTRA
+                contentVecino.classList.remove('opacity-0', 'scale-95', 'pointer-events-none', '-z-10');
+                contentVecino.classList.add('opacity-100', 'scale-100', 'z-10');
                 
-                // Pequeño delay para la opacidad (Fade In)
-                setTimeout(() => {
-                    contentVecino.classList.remove('opacity-0');
-                    contentVecino.classList.add('opacity-100');
-                }, 10);
-                
-                // 4. OCULTAR VENDEDOR
-                contentVendedor.classList.remove('opacity-100');
-                contentVendedor.classList.add('opacity-0');
-                
-                // Esperamos la transición y luego ocultamos
-                setTimeout(() => {
-                    contentVendedor.classList.remove('grid'); // 🔥 QUITAMOS GRID AQUÍ
-                    contentVendedor.classList.add('hidden');
-                }, 300);
+                // Vendedor SALE
+                contentVendedor.classList.remove('opacity-100', 'scale-100', 'z-10');
+                contentVendedor.classList.add('opacity-0', 'scale-95', 'pointer-events-none', '-z-10');
 
             } else {
-                // 1. Mover fondo
+                // 1. Mover Fondo (Derecha)
                 bg.style.transform = 'translateX(100%)';
                 bg.classList.remove('bg-blue-600');
                 bg.classList.add('bg-purple-600');
 
-                // 2. Estilos Botones
+                // 2. Colores Texto
                 btnVendedor.classList.add('text-white');
                 btnVendedor.classList.remove('text-slate-500');
                 btnVecino.classList.remove('text-white');
                 btnVecino.classList.add('text-slate-500');
 
-                // 3. MOSTRAR VENDEDOR
-                contentVendedor.classList.remove('hidden');
-                contentVendedor.classList.add('grid'); // 🔥 AGREGAMOS GRID AQUÍ
-                
-                setTimeout(() => {
-                    contentVendedor.classList.remove('opacity-0');
-                    contentVendedor.classList.add('opacity-100');
-                }, 10);
+                // 3. Transición Contenido
+                // Vendedor ENTRA
+                contentVendedor.classList.remove('opacity-0', 'scale-95', 'pointer-events-none', '-z-10');
+                contentVendedor.classList.add('opacity-100', 'scale-100', 'z-10');
 
-                // 4. OCULTAR VECINO
-                contentVecino.classList.remove('opacity-100');
-                contentVecino.classList.add('opacity-0');
-                
-                setTimeout(() => {
-                    contentVecino.classList.remove('grid'); // 🔥 QUITAMOS GRID AQUÍ
-                    contentVecino.classList.add('hidden');
-                }, 300);
+                // Vecino SALE
+                contentVecino.classList.remove('opacity-100', 'scale-100', 'z-10');
+                contentVecino.classList.add('opacity-0', 'scale-95', 'pointer-events-none', '-z-10');
             }
         }
     </script>
